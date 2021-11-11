@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.6.0 on win32)" generated="20211103 22:47:52.670" rpa="false" schemaversion="2">
+<suite id="s1" name="Demo auto" source="C:\Users\Admin\OneDrive\Desktop\Demo_auto">
+<suite id="s1-s1" name="Testsuite" source="C:\Users\Admin\OneDrive\Desktop\Demo_auto\testsuite">
+<suite id="s1-s1-s1" name="Hang hoa" source="C:\Users\Admin\OneDrive\Desktop\Demo_auto\testsuite\Hang_hoa">
+<suite id="s1-s1-s1-s1" name="Product" source="C:\Users\Admin\OneDrive\Desktop\Demo_auto\testsuite\Hang_hoa\product.robot">
+<test id="s1-s1-s1-s1-t1" name="Create">
+<kw name="create_product">
+<arg>https://hoadonautotest.kiotviet.vn/man/#/login</arg>
+<arg>admin</arg>
+<arg>123</arg>
+<arg>ProductA</arg>
+<arg>Thoi trang nam</arg>
+<arg>150000</arg>
+<arg>100000</arg>
+<arg>20</arg>
+<arg>TT01</arg>
+<arg>001</arg>
+<kw name="Login manager screen" library="login_action">
+<arg>${input_url}</arg>
+<arg>${input_username}</arg>
+<arg>${input_password}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${input_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211103 22:47:53.002" level="INFO">Opening browser 'Chrome' to base url 'https://hoadonautotest.kiotviet.vn/man/#/login'.</msg>
+<status status="PASS" starttime="20211103 22:47:53.001" endtime="20211103 22:47:57.079"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211103 22:47:57.079" endtime="20211103 22:47:57.500"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>${textbox_username}</arg>
+<arg>${input_username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211103 22:47:57.501" endtime="20211103 22:47:57.519"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${input_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211103 22:47:57.520" level="INFO">Typing text 'admin' into text field '//input[@placeholder='Tên đăng nhập']'.</msg>
+<status status="PASS" starttime="20211103 22:47:57.519" endtime="20211103 22:47:57.682"/>
+</kw>
+<status status="PASS" starttime="20211103 22:47:57.500" endtime="20211103 22:47:57.683"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>${textbox_password}</arg>
+<arg>${input_password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211103 22:47:57.684" endtime="20211103 22:47:57.700"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${input_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211103 22:47:57.701" level="INFO">Typing text '123' into text field '//input[@placeholder='Mật khẩu']'.</msg>
+<status status="PASS" starttime="20211103 22:47:57.701" endtime="20211103 22:47:57.850"/>
+</kw>
+<status status="PASS" starttime="20211103 22:47:57.683" endtime="20211103 22:47:57.850"/>
+</kw>
+<kw name="KV Click Element" library="login_action">
+<arg>${button_login}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211103 22:47:57.851" endtime="20211103 22:47:57.869"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211103 22:47:57.870" level="INFO">Clicking element '//input[@name='quan-ly']'.</msg>
+<status status="PASS" starttime="20211103 22:47:57.869" endtime="20211103 22:47:57.945"/>
+</kw>
+<status status="PASS" starttime="20211103 22:47:57.850" endtime="20211103 22:47:57.945"/>
+</kw>
+<status status="PASS" starttime="20211103 22:47:53.000" endtime="20211103 22:47:57.945"/>
+</kw>
+<kw name="Open product screen" library="login_action">
+<kw name="KV Click Element" library="login_action">
+<arg>${button_hanghoa}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211103 22:47:57.947" endtime="20211103 22:48:01.403"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211103 22:48:01.404" level="INFO">Clicking element '//i[@class='fas fa-cube']//parent::a'.</msg>
+<status status="PASS" starttime="20211103 22:48:01.403" endtime="20211103 22:48:01.831"/>
+</kw>
+<status status="PASS" starttime="20211103 22:47:57.946" endtime="20211103 22:48:01.831"/>
+</kw>
+<kw name="KV Click Element" library="login_action">
+<arg>${button_danhmuc}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211103 22:48:01.832" endtime="20211103 22:48:01.953"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211103 22:48:01.954" level="INFO">Clicking element '//i[@class='fa-fw fa fa-th']//parent::a'.</msg>
+<status status="PASS" starttime="20211103 22:48:01.953" endtime="20211103 22:48:02.653"/>
+</kw>
+<status status="PASS" starttime="20211103 22:48:01.831" endtime="20211103 22:48:02.653"/>
+</kw>
+<status status="PASS" starttime="20211103 22:47:57.945" endtime="20211103 22:48:02.654"/>
+</kw>
+<kw name="Add new product" library="login_action">
+<kw name="KV Click Element" library="login_action">
+<arg>${button_themmoi}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211103 22:48:02.656" endtime="20211103 22:48:02.792"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211103 22:48:02.794" level="INFO">Clicking element '//span[normalize-space(text())='Thêm mới']//preceding::i[@class='far fa-plus']'.</msg>
+<status status="PASS" starttime="20211103 22:48:02.793" endtime="20211103 22:48:04.615"/>
+</kw>
+<status status="PASS" starttime="20211103 22:48:02.654" endtime="20211103 22:48:04.616"/>
+</kw>
+<kw name="KV Click Element" library="login_action">
+<arg>${button_themhanghoa}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211103 22:48:04.617" endtime="20211103 22:48:04.637"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211103 22:48:04.638" level="INFO">Clicking element '//a[normalize-space(text())='Thêm hàng hóa']'.</msg>
+<status status="PASS" starttime="20211103 22:48:04.637" endtime="20211103 22:48:05.572"/>
+</kw>
+<status status="PASS" starttime="20211103 22:48:04.616" endtime="20211103 22:48:05.572"/>
+</kw>
+<status status="PASS" starttime="20211103 22:48:02.654" endtime="20211103 22:48:05.572"/>
+</kw>
+<kw name="choose product group" library="login_action">
+<arg>${input_nameProd}</arg>
+<arg>${input_text_group}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211103 22:48:07.581" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211103 22:48:05.574" endtime="20211103 22:48:07.582"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${ten_sp}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211103 22:48:07.582" endtime="20211103 22:48:07.625"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ten_sp}</arg>
+<arg>${input_nameProd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211103 22:48:07.626" level="INFO">Typing text 'ProductA' into text field '//input[@kv-valid-special-chars='Tên hàng']'.</msg>
+<status status="PASS" starttime="20211103 22:48:07.625" endtime="20211103 22:48:07.887"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${search_group}}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211103 22:48:08.075" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211103 22:48:07.921" endtime="20211103 22:48:08.075"/>
+</kw>
+<msg timestamp="20211103 22:48:08.082" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression (//input[@class="k-textbox"])[6]} because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//input[@class="k-textbox"])[6]}' is not a valid XPath expression.
+  (Session info: chrome=95.0.4638.69)
+</msg>
+<status status="FAIL" starttime="20211103 22:48:07.887" endtime="20211103 22:48:08.082"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_group}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211103 22:48:08.082" endtime="20211103 22:48:08.082"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${search_group}</arg>
+<arg>${text_group}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211103 22:48:08.083" endtime="20211103 22:48:08.083"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${select_nhomhang}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20211103 22:48:08.083" endtime="20211103 22:48:08.083"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_nhomhang}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211103 22:48:08.083" endtime="20211103 22:48:08.083"/>
+</kw>
+<status status="FAIL" starttime="20211103 22:48:05.573" endtime="20211103 22:48:08.084"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>${price_cost}</arg>
+<arg>${input_cost}</arg>
+<status status="NOT RUN" starttime="20211103 22:48:08.085" endtime="20211103 22:48:08.085"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>${price_cost}</arg>
+<arg>${input_base_price}</arg>
+<status status="NOT RUN" starttime="20211103 22:48:08.085" endtime="20211103 22:48:08.085"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>${ton_kho}</arg>
+<arg>${input_onhand}</arg>
+<status status="NOT RUN" starttime="20211103 22:48:08.085" endtime="20211103 22:48:08.085"/>
+</kw>
+<kw name="Add thuoc tinh" library="login_action">
+<arg>${input_text_tt}</arg>
+<arg>${input_value_attribute}</arg>
+<status status="NOT RUN" starttime="20211103 22:48:08.085" endtime="20211103 22:48:08.086"/>
+</kw>
+<kw name="KV Click Element" library="login_action">
+<arg>${button_save_product}</arg>
+<status status="NOT RUN" starttime="20211103 22:48:08.086" endtime="20211103 22:48:08.086"/>
+</kw>
+<status status="FAIL" starttime="20211103 22:47:52.998" endtime="20211103 22:48:08.087"/>
+</kw>
+<status status="FAIL" starttime="20211103 22:47:52.995" endtime="20211103 22:48:08.090">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression (//input[@class="k-textbox"])[6]} because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//input[@class="k-textbox"])[6]}' is not a valid XPath expression.
+  (Session info: chrome=95.0.4638.69)
+</status>
+</test>
+<status status="FAIL" starttime="20211103 22:47:52.722" endtime="20211103 22:48:08.095"/>
+</suite>
+<status status="FAIL" starttime="20211103 22:47:52.716" endtime="20211103 22:48:08.099"/>
+</suite>
+<status status="FAIL" starttime="20211103 22:47:52.712" endtime="20211103 22:48:08.103"/>
+</suite>
+<status status="FAIL" starttime="20211103 22:47:52.673" endtime="20211103 22:48:08.109"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo auto">Demo auto</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testsuite">Demo auto.Testsuite</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Hang hoa">Demo auto.Testsuite.Hang hoa</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Product">Demo auto.Testsuite.Hang hoa.Product</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

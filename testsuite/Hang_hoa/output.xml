@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.6.0 on win32)" generated="20211108 22:06:11.685" rpa="false" schemaversion="2">
+<suite id="s1" name="Product" source="C:\Users\Admin\OneDrive\Desktop\Demo_auto\testsuite\Hang_hoa\product.robot">
+<test id="s1-t1" name="Create">
+<kw name="create_product">
+<arg>https://hoadonautotest.kiotviet.vn/newsale/</arg>
+<arg>admin</arg>
+<arg>123</arg>
+<arg>NAM002</arg>
+<arg>NAM003</arg>
+<arg>NAM004</arg>
+<arg>NAM005</arg>
+<kw name="Login manager screen" library="login_action">
+<arg>${input_url}</arg>
+<arg>${input_username}</arg>
+<arg>${input_password}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${input_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211108 22:06:12.013" level="INFO">Opening browser 'Chrome' to base url 'https://hoadonautotest.kiotviet.vn/newsale/'.</msg>
+<status status="PASS" starttime="20211108 22:06:12.013" endtime="20211108 22:06:15.504"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211108 22:06:15.504" endtime="20211108 22:06:15.773"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>${textbox_username}</arg>
+<arg>${input_username}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:15.775" endtime="20211108 22:06:16.496"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${input_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:06:16.496" level="INFO">Typing text 'admin' into text field '//input[@placeholder='Tên đăng nhập']'.</msg>
+<status status="PASS" starttime="20211108 22:06:16.496" endtime="20211108 22:06:16.664"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:15.774" endtime="20211108 22:06:16.665"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>${textbox_password}</arg>
+<arg>${input_password}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:16.665" endtime="20211108 22:06:16.681"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${input_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:06:16.682" level="INFO">Typing text '123' into text field '//input[@name='Password']'.</msg>
+<status status="PASS" starttime="20211108 22:06:16.681" endtime="20211108 22:06:16.777"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:16.665" endtime="20211108 22:06:16.778"/>
+</kw>
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${button_login}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:16.778" endtime="20211108 22:06:16.794"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:16.797" level="INFO">Executing JavaScript:
+document.evaluate("//button[@name='ban-hang']",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:16.795" endtime="20211108 22:06:16.806"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:16.778" endtime="20211108 22:06:16.807"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:12.013" endtime="20211108 22:06:16.807"/>
+</kw>
+<kw name="Given User đăng nhập và mở màn hình NewPOS" library="login_action">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211108 22:06:18.813" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211108 22:06:16.807" endtime="20211108 22:06:18.813"/>
+</kw>
+<kw name="KV Click Element" library="login_action">
+<arg>${move_text_trai_nghiem_ngay}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:18.816" endtime="20211108 22:06:22.580"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211108 22:06:22.583" level="INFO">Clicking element '//div[@class='introjs-overlay']'.</msg>
+<status status="PASS" starttime="20211108 22:06:22.580" endtime="20211108 22:06:22.673"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:18.813" endtime="20211108 22:06:22.673"/>
+</kw>
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${icon_ban_hang_moi}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:22.674" endtime="20211108 22:06:22.696"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:22.698" level="INFO">Executing JavaScript:
+document.evaluate("//a[@title='Màn hình bán hàng mới']//i",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:22.697" endtime="20211108 22:06:24.615"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:22.673" endtime="20211108 22:06:24.617"/>
+</kw>
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${button_close_tooltip}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:24.618" endtime="20211108 22:06:28.425"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:28.431" level="INFO">Executing JavaScript:
+document.evaluate("//h1[contains(@class,'tooltip-title')]//following-sibling::a",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:28.425" endtime="20211108 22:06:28.477"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:24.617" endtime="20211108 22:06:28.480"/>
+</kw>
+<timeout value="30 seconds"/>
+<status status="PASS" starttime="20211108 22:06:16.807" endtime="20211108 22:06:28.481"/>
+</kw>
+<kw name="And click mode quick sale" library="login_action">
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${button_mode_ban_nhanh}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:28.484" endtime="20211108 22:06:28.529"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:28.531" level="INFO">Executing JavaScript:
+document.evaluate("//span[contains(text(),'Bán nhanh')]",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:28.529" endtime="20211108 22:06:28.735"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:28.483" endtime="20211108 22:06:28.735"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:28.482" endtime="20211108 22:06:28.735"/>
+</kw>
+<kw name="And tìm kiếm sản phẩm" library="login_action">
+<arg>${input_ma_sp1}</arg>
+<arg>${input_ma_sp2}</arg>
+<arg>${input_ma_sp3}</arg>
+<arg>${input_ma_sp4}</arg>
+<kw name="KV Input Text" library="login_action">
+<arg>//input[@placeholder='Tìm hàng hóa']</arg>
+<arg>${input_ma_sp1}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:28.737" endtime="20211108 22:06:28.845"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${input_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:06:28.846" level="INFO">Typing text 'NAM002' into text field '//input[@placeholder='Tìm hàng hóa']'.</msg>
+<status status="PASS" starttime="20211108 22:06:28.845" endtime="20211108 22:06:28.985"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:28.736" endtime="20211108 22:06:28.985"/>
+</kw>
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${output_sp}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:28.985" endtime="20211108 22:06:29.450"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:29.451" level="INFO">Executing JavaScript:
+document.evaluate("//div[@class='output-body']",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:29.451" endtime="20211108 22:06:29.623"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:28.985" endtime="20211108 22:06:29.624"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>//input[@placeholder='Tìm hàng hóa']</arg>
+<arg>${input_ma_sp2}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:29.625" endtime="20211108 22:06:29.641"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${input_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:06:29.642" level="INFO">Typing text 'NAM003' into text field '//input[@placeholder='Tìm hàng hóa']'.</msg>
+<status status="PASS" starttime="20211108 22:06:29.641" endtime="20211108 22:06:29.788"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:29.624" endtime="20211108 22:06:29.788"/>
+</kw>
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${output_sp}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:29.789" endtime="20211108 22:06:29.800"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:29.801" level="INFO">Executing JavaScript:
+document.evaluate("//div[@class='output-body']",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:29.801" endtime="20211108 22:06:29.851"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:29.788" endtime="20211108 22:06:29.852"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>//input[@placeholder='Tìm hàng hóa']</arg>
+<arg>${input_ma_sp3}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:29.852" endtime="20211108 22:06:29.865"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${input_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:06:29.866" level="INFO">Typing text 'NAM004' into text field '//input[@placeholder='Tìm hàng hóa']'.</msg>
+<status status="PASS" starttime="20211108 22:06:29.865" endtime="20211108 22:06:29.983"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:29.852" endtime="20211108 22:06:29.984"/>
+</kw>
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${output_sp}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:29.984" endtime="20211108 22:06:30.004"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:30.009" level="INFO">Executing JavaScript:
+document.evaluate("//div[@class='output-body']",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:30.005" endtime="20211108 22:06:30.067"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:29.984" endtime="20211108 22:06:30.067"/>
+</kw>
+<kw name="KV Input Text" library="login_action">
+<arg>//input[@placeholder='Tìm hàng hóa']</arg>
+<arg>${input_ma_sp4}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:30.069" endtime="20211108 22:06:30.090"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath}</arg>
+<arg>${input_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211108 22:06:30.090" level="INFO">Typing text 'NAM005' into text field '//input[@placeholder='Tìm hàng hóa']'.</msg>
+<status status="PASS" starttime="20211108 22:06:30.090" endtime="20211108 22:06:30.203"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:30.068" endtime="20211108 22:06:30.203"/>
+</kw>
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${output_sp}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:30.205" endtime="20211108 22:06:30.220"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:30.223" level="INFO">Executing JavaScript:
+document.evaluate("//div[@class='output-body']",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:30.221" endtime="20211108 22:06:30.273"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:30.203" endtime="20211108 22:06:30.273"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:28.735" endtime="20211108 22:06:30.273"/>
+</kw>
+<kw name="And Click bỏ chọn tooltip 'Xong'" library="login_action">
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${button_xong_mhbh}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:30.276" endtime="20211108 22:06:30.292"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:30.293" level="INFO">Executing JavaScript:
+document.evaluate("//a[@role='button' and contains(text(),'Xong')]",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:30.292" endtime="20211108 22:06:30.314"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:30.275" endtime="20211108 22:06:30.315"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:30.274" endtime="20211108 22:06:30.315"/>
+</kw>
+<kw name="And verify thông tin mã sp, tên sp, số lượng mỗi sản phẩm, giá mỗi sản phẩm, tổng giá mỗi sản phẩm mode bán nhanh và mode bán thương" library="login_action">
+<kw name="And click mode quick sale" library="login_action">
+<kw name="KV Click by Excute Java" library="login_action">
+<arg>${button_mode_ban_nhanh}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211108 22:06:30.319" endtime="20211108 22:06:30.329"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate("${locator}",document.body,null,9,null).singleNodeValue.click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211108 22:06:30.332" level="INFO">Executing JavaScript:
+document.evaluate("//span[contains(text(),'Bán nhanh')]",document.body,null,9,null).singleNodeValue.click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20211108 22:06:30.330" endtime="20211108 22:06:30.341"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:30.318" endtime="20211108 22:06:30.341"/>
+</kw>
+<status status="PASS" starttime="20211108 22:06:30.315" endtime="20211108 22:06:30.341"/>
+</kw>
+<kw name="Get value information products" library="login_action">
+<var>${list_info_prod_quick_sale}</var>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>//div[contains(@ng-repeat,'getItems')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20211108 22:06:30.358" level="INFO">${count} = 1</msg>
+<status status="PASS" starttime="20211108 22:06:30.342" endtime="20211108 22:06:30.358"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211108 22:06:30.359" level="INFO">1</msg>
+<status status="PASS" starttime="20211108 22:06:30.358" endtime="20211108 22:06:30.360"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${list_masp}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20211108 22:06:30.360" level="INFO">${list_masp} = []</msg>
+<status status="PASS" starttime="20211108 22:06:30.360" endtime="20211108 22:06:30.360"/>
+</kw>
+<kw name=":FOR">
+<arg>${i}</arg>
+<arg>IN RANGE</arg>
+<arg>1</arg>
+<arg>${count}+1</arg>
+<msg timestamp="20211108 22:06:30.360" level="FAIL">Support for the old for loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</msg>
+<status status="FAIL" starttime="20211108 22:06:30.360" endtime="20211108 22:06:30.360"/>
+</kw>
+<kw name="\">
+<arg>${ma_sanpham}</arg>
+<arg>Get Text</arg>
+<arg>(${ma_sp_newpos})[${i}]</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.363" endtime="20211108 22:06:30.363"/>
+</kw>
+<kw name="\">
+<arg>${ten_sanpham}</arg>
+<arg>Get Text</arg>
+<arg>(${ten_sp_newpos})[${i}]</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${quantity_sanpham}</arg>
+<arg>Get Value</arg>
+<arg>(${quantity_product_newpos})[${i}]</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${gia_sanpham}</arg>
+<arg>Get Text</arg>
+<arg>(${button_gia_sp})[${i}]</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${gia_sanpham}</arg>
+<arg>Replace String</arg>
+<arg>${gia_sanpham}</arg>
+<arg>,</arg>
+<arg>${EMPTY}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${gia_sp}</arg>
+<arg>Convert To Integer</arg>
+<arg>${gia_sanpham}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${gia_sanpham}</arg>
+<arg>Convert To Number</arg>
+<arg>${gia_sanpham}</arg>
+<arg>precision=0</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>log</arg>
+<arg>${gia_sanpham}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${soluong_sp}</arg>
+<arg>Convert To Integer</arg>
+<arg>${quantity_sanpham}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${get_gia_sp}</arg>
+<arg>Get Text</arg>
+<arg>${cart_price}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${get_gia_sp}</arg>
+<arg>Replace String</arg>
+<arg>${gia_sanpham}</arg>
+<arg>,</arg>
+<arg>${EMPTY}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${gia_sanpham_num}</arg>
+<arg>Convert To Integer</arg>
+<arg>${get_gia_sp}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>${tong_gia_sp}</arg>
+<arg>Evaluate</arg>
+<arg>${soluong_sp}*${gia_sp}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>log</arg>
+<arg>${tong_gia_sp}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>Should Be Equal</arg>
+<arg>${gia_sanpham_num}</arg>
+<arg>${tong_gia_sp}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>Append To List</arg>
+<arg>${list_masp}</arg>
+<arg>${ma_sanpham}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>Append To List</arg>
+<arg>${list_masp}</arg>
+<arg>${ten_sanpham}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.364"/>
+</kw>
+<kw name="\">
+<arg>Append To List</arg>
+<arg>${list_masp}</arg>
+<arg>${quantity_sanpham}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.364" endtime="20211108 22:06:30.368"/>
+</kw>
+<kw name="\">
+<arg>Append To List</arg>
+<arg>${list_masp}</arg>
+<arg>${gia_sanpham}</arg>
+<status status="NOT RUN" starttime="20211108 22:06:30.368" endtime="20211108 22:06:30.368"/>
+</kw>
+<kw name="Return From Keyword" library="BuiltIn">
+<arg>${list_masp}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="NOT RUN" starttime="20211108 22:06:30.368" endtime="20211108 22:06:30.368"/>
+</kw>
+<status status="FAIL" starttime="20211108 22:06:30.342" endtime="20211108 22:06:30.370"/>
+</kw>
+<kw name="And click mode normal sale">
+<status status="NOT RUN" starttime="20211108 22:06:30.379" endtime="20211108 22:06:30.379"/>
+</kw>
+<kw name="Get value information products" library="login_action">
+<var>${list_info_prod_normal_sale}</var>
+<status status="NOT RUN" starttime="20211108 22:06:30.380" endtime="20211108 22:06:30.380"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${list_info_prod_quick_sale}</arg>
+<arg>${list_info_prod_normal_sale}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20211108 22:06:30.380" endtime="20211108 22:06:30.380"/>
+</kw>
+<status status="FAIL" starttime="20211108 22:06:30.315" endtime="20211108 22:06:30.382"/>
+</kw>
+<status status="FAIL" starttime="20211108 22:06:12.013" endtime="20211108 22:06:30.383"/>
+</kw>
+<status status="FAIL" starttime="20211108 22:06:12.011" endtime="20211108 22:06:30.384">Support for the old for loop syntax has been removed. Replace ':FOR' with 'FOR', end the loop with 'END', and remove escaping backslashes.</status>
+</test>
+<status status="FAIL" starttime="20211108 22:06:11.687" endtime="20211108 22:06:30.386"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Product">Product</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
